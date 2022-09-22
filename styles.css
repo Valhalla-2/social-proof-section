@@ -20,6 +20,7 @@ html, body {
 
 body {
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   font-family: var(--league-spartan)
@@ -29,7 +30,8 @@ body {
   max-width: 90%;
   display: flex;
   flex-flow: column nowrap;
-  gap:3rem;
+  gap: 3rem;
+  margin: 10% 0;
 }
 
 .product-rating {
@@ -74,7 +76,7 @@ body {
   border-radius: 10px;
   color: var(--white);
   padding: 2.5rem;
-  margin: 1rem 0 ;
+  margin: 1rem 0;
 }
 
 .profile {
@@ -90,6 +92,7 @@ body {
 
 .buyer-position {
   color: var(--soft-pink);
+  margin: 5px 0 0;
 }
 
 .buyer-review {
