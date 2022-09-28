@@ -50,6 +50,7 @@ body {
 .description {
   margin: 5% 0;
   color: var(--dgray-magenta);
+  line-height: 1.3;
 }
 
 .stars {
@@ -98,52 +99,57 @@ body {
   margin: 1rem 0 0 0;
 }
 
-@media screen and (min-width:35em) {
+/* For Responsiveness */
+@media screen and (min-width:25em) {
+  .product-rating {
+    display: flex;
+    flex-flow: row nowrap;
+    gap:2rem;
+  }
+
+  .headings, .stars-ratings {
+    width: 50%;
+    flex: 0 1 auto;
+  }
+
+  .headings {
+    text-align: start;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width:55em) {
   .body {
     background: url("images/bg-pattern-top-desktop.svg"), url("images/bg-pattern-bottom-desktop.svg");
   }
 
   .container {
-
-  }
-
-}
-
-
-/* @media screen and (min-width:) {
-  .container {
-    width: 65%;
-  }
-
-  .product-rating {
-    display: flex;
-    text-align: start;
-  }
-
-  .headings, .stars-ratings {
-    flex: 1 1 auto;
-    width: 50%;
+    width: unset;
+    margin:5%;
   }
 
   .headings {
-    padding: 0 15% 0 0;
+    padding-right: 15%;
   }
 
-  .product-reviews {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+  .stars {
+    width: 70%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 2.5rem 2rem;
   }
 
-  .colton-smith {
-
+  .stars>.rating {
+    margin: 0;
   }
 
-  .irene-roberts {
-
+  .stars-in-report-guru {
+    margin: 3rem auto;
   }
 
-  .anne-wallace {
-
+  .stars-in-besttech {
+    margin-left: auto;
+    ;
   }
-} */
+}
