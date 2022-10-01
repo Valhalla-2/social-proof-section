@@ -20,22 +20,15 @@ html, body {
 }
 
 body {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
   font-family: var(--league-spartan);
-  font-size: clamp(1rem, 1vw, 2.5rem);
+  font-size: clamp(1.05rem, 1vw, 2.5rem);
   background: url('images/bg-pattern-top-mobile.svg') left top no-repeat,
     url('images/bg-pattern-bottom-mobile.svg') bottom right no-repeat;
 }
 
 .container {
-  width: 90%;
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 3rem;
-  margin: 2rem 0;
+  margin: 5% auto;
+  padding: 0 1rem;
 }
 
 .product-rating {
@@ -60,17 +53,21 @@ body {
   margin: 1rem 0;
 }
 
+.star-icons {
+  text-align: center;
+}
+
 .rating {
   margin: 0.5rem 0 0 0;
   color: var(--primery-magenta);
   font-weight: 700;
 }
 
-.col {
+.card {
   background-color: var(--primery-magenta);
   border-radius: 10px;
   color: var(--white);
-  padding: 2.5rem;
+  padding:2.5rem 1.6rem;
   margin: 1rem 0;
   line-height: 1.1;
 }
@@ -99,12 +96,20 @@ body {
   margin: 1rem 0 0 0;
 }
 
+.attribution {
+  text-align: center;
+}
+
 /* For Responsiveness */
-@media screen and (min-width:25em) {
+@media screen and (min-width:35em) {
+  .container {
+    max-width: 1200px;
+  }
+
   .product-rating {
     display: flex;
-    flex-flow: row nowrap;
-    gap:2rem;
+    text-align: start;
+    gap: 2rem;
   }
 
   .headings, .stars-ratings {
@@ -113,43 +118,46 @@ body {
   }
 
   .headings {
-    text-align: start;
-    padding: 0;
-  }
-}
-
-@media screen and (min-width:55em) {
-  .body {
-    background: url("images/bg-pattern-top-desktop.svg"), url("images/bg-pattern-bottom-desktop.svg");
-  }
-
-  .container {
-    width: unset;
-    margin:5%;
-  }
-
-  .headings {
-    padding-right: 15%;
+    padding-right: 12%;
   }
 
   .stars {
-    width: 70%;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    padding: 2.5rem 2rem;
+    justify-content: space-around;
+    width: 75%;
+    padding: 1.7rem;
+    align-items: center;
   }
 
-  .stars>.rating {
+  .rating {
     margin: 0;
   }
 
   .stars-in-report-guru {
-    margin: 3rem auto;
+    margin: 0 auto;
   }
 
   .stars-in-besttech {
     margin-left: auto;
-    ;
+  }
+
+  .product-reviews {
+    padding: 5% 0 0;
+    gap: 2%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 585px));
+    grid-template-rows: 20rem;
+  }
+
+  .colton-smith {
+    align-self: self-start;
+  }
+
+  .irene-roberts {
+    align-self: center;
+  }
+
+  .anne-wallace {
+    align-self: self-end;
   }
 }
